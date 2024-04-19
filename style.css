@@ -1,0 +1,394 @@
+/* Global Stuffs  */
+:root {
+  --primary-color: #333;
+  --secondary-color: #444;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+}
+
+body {
+  font-family: Catamaran, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #333;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+}
+/* Global Stufss Ended  */
+
+.nav {
+  font-size: 1.2rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.nav .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.nav .logo {
+  font-size: 2rem;
+}
+
+.nav .navbar {
+  display: flex;
+  justify-self: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav .navbar li {
+  padding: 0 16px;
+}
+
+.nav .navbar a:hover {
+  padding-bottom: 2px;
+}
+
+.nav .navbar a:hover {
+  color: rgb(160, 73, 73);
+  border-bottom: solid 2px #333;
+}
+
+/* Section-1 */
+.section-1 {
+  margin-bottom: 40px;
+  margin-top: 80px;
+}
+.section-1 .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 3rem;
+}
+
+/* Checking Flex for Side 1 But having Problem (Seek Solution)
+.section-1 .container .side1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+} */
+
+.section-1 .larger {
+  font-size: 3.8rem;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.section-1 p {
+  margin-bottom: 10px;
+}
+
+.recent-jobs {
+  margin: 20px;
+  text-align: center;
+}
+/* Section Two */
+.section-2 {
+  max-width: 100%;
+  height: 600px;
+  position: relative;
+  background: url("/img/gal.jpg") no-repeat fixed center bottom/cover;
+}
+
+.section-2-inner {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  max-width: 860px;
+  padding: 4rem 0px;
+  z-index: 3;
+}
+
+.section-2 h3 {
+  font-size: 2rem;
+  z-index: inherit;
+}
+
+.section-2 h1 {
+  font-size: 4.5rem;
+  margin-top: 1rem;
+  z-index: inherit;
+}
+
+.section-2 p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  z-index: inherit;
+}
+
+.section-2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  /* 120px for the left hand side, top and Bottom, But for the Reverse Side, We'll duplicate and do same  */
+  box-shadow: inset 120px 100px 250px #3330;
+}
+
+/* Section 3 */
+.section-c .gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.section-c .gallery a:first-child {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  /*   grid-row: 1/3;
+  grid-column: 1/3; */
+}
+
+.section-c .gallery a:nth-child(2) {
+  grid-column: 3/5;
+}
+/* To make sure all the Images fit into their container 100% */
+.section-c .gallery img,
+.section-c .gallery a {
+  width: 100%;
+  height: 100%;
+}
+
+/* Footer */
+.section-footer {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.section-footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.section-footer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-footer h3 {
+  margin-bottom: 0.7rem;
+}
+
+.section-footer a {
+  color: #fff;
+  line-height: 1.9;
+}
+.section-footer a > i {
+  color: #555;
+  margin-right: 0.5rem;
+}
+
+/*Email Form */
+.email-form {
+  width: 100%;
+  display: inline-block;
+  background-color: #555;
+  position: relative;
+  border-radius: 20px;
+  line-height: 0;
+  margin-top: 1rem;
+}
+
+.email-form .form-control {
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+  color: #ddd;
+  background-color: transparent;
+  font-family: inherit;
+  margin: 0;
+  padding: 0 3rem 0 1.5rem;
+  width: 100%;
+  height: 45px;
+  border-radius: 20px;
+}
+
+.email-form .submit {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #eee;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  color: #333;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+}
+
+/* SLIDER */
+.slider-container {
+  overflow: hidden;
+  position: relative; /* Remove absolute positioning */
+  width: 600px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.slide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.slide img {
+  position: absolute; /* Make images absolute within slides */
+  top: 0; /* Position image to top of the slide */
+  left: 0; /* Position image to left of the slide */
+  width: 100%; /* Set image width to 100% of slide */
+  height: 100%; /* Set image height to 100% of slide */
+  z-index: 1; /* Give image higher stacking order (optional) */
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute; /* Change to absolute positioning */
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.prev-btn {
+  top: 50%; /* Position vertically at slider center */
+  left: 10px; /* Add margin for spacing */
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.next-btn {
+  top: 50%; /* Position vertically at slider center */
+  right: 10px; /* Add margin for spacing */
+  transform: translateY(-50%); /* Center vertically */
+}
+
+@media (max-width: 700px) {
+  .section-1 .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .section-1 .container div:first-child {
+    order: 2;
+  }
+  .section-1 .container div:last-child {
+    order: -1;
+  }
+
+  .section-1 .container img {
+    width: 80%;
+    margin: auto;
+  }
+
+  .section-1 .container .larger {
+    font-size: 3rem;
+  }
+
+  .section-2-inner h1 {
+    font-size: 3.5rem;
+  }
+
+  .section-c .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section-c .gallery a:first-child {
+    grid-row: 1/1;
+    grid-column: 1/1;
+  }
+
+  .section-c .gallery a:nth-child(2) {
+    grid-row: 2/2;
+    grid-column: 2/4;
+  }
+
+  .section-c .gallery a:last-child {
+    display: none;
+  }
+
+  .section-footer {
+    padding: 2rem 0;
+  }
+
+  .section-footer .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .section-footer div:nth-child(2),
+  .section-footer div:nth-child(3) {
+    display: none;
+  }
+}
