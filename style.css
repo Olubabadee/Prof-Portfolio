@@ -129,7 +129,7 @@ a {
   height: 600px;
   position: relative;
   /* background: url("/img/gal.jpg") no-repeat fixed center bottom/cover; */
-  background: url("/img/gal.jpg") no-repeat fixed center bottom/cover;
+  background: url("/img/gal\ -\ Copy.jpg") no-repeat fixed center bottom/cover;
 }
 
 .section-2-inner {
